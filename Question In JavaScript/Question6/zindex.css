@@ -1,0 +1,19 @@
+h3{
+    font-family: 'gilroy';
+    font-size: medium;
+    display:none;
+}
+
+.tab{
+    background-color: rgb(32, 146, 146);
+    border: 2px solid black;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#tab{
+    font-family: 'gilroy';
+    font-weight: 700;
+    display: flex;
+    gap: 20px;
+}
