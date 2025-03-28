@@ -77,4 +77,48 @@ console.log("RegExp:", typeof regExp); // "object"
 
 
 
+// !****************************************! Stack And Heap Memory ********************
 
+// ✅ Primitive Data Types (Stored in Stack Memory)
+
+// Stack stores values directly (copy of value)
+
+let myName = "HelloFirdosh";
+let lastName = myName; // Copy of myName is created
+lastName = "Bnaiyaaa"; // Only lastName changes, myName remains the same
+
+// Output
+console.log("myName:", myName); // "HelloFirdosh" (Original value remains unchanged)
+console.log("lastName:", lastName); // "Bnaiyaaa" (Copy is modified)
+
+// Explanation:
+// - Primitive types (String, Number, Boolean, Undefined, Null, Symbol, BigInt) are stored in Stack Memory.
+// - When we assign a primitive value to a new variable, it creates a COPY.
+// - Changing the copy doesn't affect the original value.
+
+
+//! ✅ Non-Primitive (Reference) Data Types (Stored in Heap Memory)
+
+// Heap stores reference (address) of the value
+
+let person = { name: "John" };
+let anotherPerson = person; // Both variables point to the same memory location
+anotherPerson.name = "Firdosh"; // Changing one affects the other
+
+// Output
+console.log("person:", person); // { name: "Firdosh" }
+console.log("anotherPerson:", anotherPerson); // { name: "Firdosh" }
+
+// !Explanation:
+// - Non-Primitive types (Object, Array, Function) are stored in Heap Memory.
+// - Variables hold a REFERENCE (address) to the actual object.
+// - When we assign a reference type to another variable, both point to the same memory.
+// - Changing one affects the other.
+
+// ✅ Summary of Stack vs Heap
+/* 
+| Memory Type   | Data Types Stored                 | Behavior                             |
+|---------------|----------------------------------|--------------------------------------|
+| Stack Memory  | Primitive (String, Number, etc.) | Stores a copy (Independent values)   |
+| Heap Memory   | Non-Primitive (Object, Array)    | Stores reference (Shared values)     |
+*/
