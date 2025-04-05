@@ -23,7 +23,7 @@ const score2 = 3400000000;
 // console.log(Number.MAX_SAFE_INTEGER);  // 2^53 - 1 → Safe integer range
 // console.log(Number.MIN_SAFE_INTEGER);  // -(2^53 - 1)
 
-// ++++++++++++++++++++++++++++++++ MATH ++++++++++++++++++++++++++++++++++++
+//! ++++++++++++++++++++++++++++++++ MATH ++++++++++++++++++++++++++++++++++++
 
 // Math.abs(x)
 // console.log(Math.abs(-4)); 
