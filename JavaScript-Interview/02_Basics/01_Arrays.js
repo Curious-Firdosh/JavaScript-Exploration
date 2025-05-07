@@ -1,43 +1,74 @@
-// Creating an array
+// =======================================
+// Array Methods in JavaScript (with Explanation)
+// =======================================
+
+// ✅ Creating an array using the `new Array()` constructor
 const myarr5 = new Array("kala", 456, "kiHaalChhaaal");
-console.log("Original Array: ", myarr2);
 
-// Array Methods
+// ❌ You mistakenly used 'myarr2' before declaring it.
+// Let's fix that by using 'myarr5' for demonstration.
 
-// Push method (adds to the end)
-myarr2.push("ShaktiMaaaan");
-console.log("After push(): ", myarr2);
+console.log("Original Array: ", myarr5); // Output: [ 'kala', 456, 'kiHaalChhaaal' ]
 
-// Pop method (removes from the end)
-myarr2.pop();
-console.log("After pop(): ", myarr2);
+// ✅ push(): Adds element at the end
+myarr5.push("ShaktiMaaaan");
+console.log("After push(): ", myarr5);
+// Output: [ 'kala', 456, 'kiHaalChhaaal', 'ShaktiMaaaan' ]
 
-// Shift method (removes from the start)
-myarr2.shift();
-console.log("After shift(): ", myarr2);
+// ✅ pop(): Removes element from the end
+myarr5.pop();
+console.log("After pop(): ", myarr5);
+// Output: [ 'kala', 456, 'kiHaalChhaaal' ]
 
-// Unshift method (adds to the start)
-myarr2.unshift("890@@");
-console.log("After unshift(): ", myarr2);
+// ✅ shift(): Removes element from the start
+myarr5.shift();
+console.log("After shift(): ", myarr5);
+// Output: [ 456, 'kiHaalChhaaal' ]
 
-// Includes method (check if element is in the array)
-console.log("Does the array include 'kala'? ", myarr2.includes("kala")); // true or false
+// ✅ unshift(): Adds element at the start
+myarr5.unshift("890@@");
+console.log("After unshift(): ", myarr5);
+// Output: [ '890@@', 456, 'kiHaalChhaaal' ]
 
-// IndexOf method (finds the index of an element)
-console.log("Index of 456: ", myarr2.indexOf(456)); // Returns the index, or -1 if not found
+// ✅ includes(): Checks if a value exists
+console.log("Does the array include 'kala'? ", myarr5.includes("kala"));
+// Output: false (because we shifted "kala" out earlier)
 
-// Join method (joins all elements into a single string) hey it joins but also converted into strings 
-const newArray = myarr2.join();
+// ✅ indexOf(): Finds index of an element
+console.log("Index of 456: ", myarr5.indexOf(456));
+// Output: 1 (index of 456 in the array)
+
+// ✅ join(): Combines array into a string (all elements become strings)
+const newArray = myarr5.join();
 console.log("Array as a string using join(): ", newArray);
+// Output: "890@@,456,kiHaalChhaaal"
+
+// =======================================
+// slice() vs splice()
+// =======================================
 
 const A = [1, 2, 3, 4, 5];
 
-// Using slice() (does not modify the original array)
-const myarr1 = A.slice(1, 3); 
-console.log(myarr1); // [2, 3]
-console.log("Original Slice Array", A); // [1, 2, 3, 4, 5]
+// ✅ slice(): copies part of the array without modifying the original
+const myarr1 = A.slice(1, 3); // from index 1 to 2 (not 3)
+console.log("Result from slice():", myarr1); // Output: [2, 3]
+console.log("Original array after slice():", A); // Output: [1, 2, 3, 4, 5]
 
-// Using splice() (modifies the original array)
-const myarr2 = A.splice(1, 3); 
-console.log(myarr2); // [2, 3, 4]
-console.log("Original Splice Array", A); // [1, 5]
+// ✅ splice(): removes elements (and can add too), modifies original
+const myarr2 = A.splice(1, 3); // from index 1, remove 3 elements → [2, 3, 4]
+console.log("Result from splice():", myarr2); // Output: [2, 3, 4]
+console.log("Original array after splice():", A); // Output: [1, 5]
+
+/*
+🧠 Summary:
+
+🔹 push()       → add at end        ✅ modifies array
+🔹 pop()        → remove from end   ✅ modifies array
+🔹 shift()      → remove from start ✅ modifies array
+🔹 unshift()    → add at start      ✅ modifies array
+🔹 includes()   → check presence    🔍 returns true/false
+🔹 indexOf()    → find index        🔢 returns index or -1
+🔹 join()       → join into string  🔗 returns a string
+🔹 slice()      → extract part      🧪 does NOT modify original
+🔹 splice()     → cut and return    ✂️ modifies original
+*/
