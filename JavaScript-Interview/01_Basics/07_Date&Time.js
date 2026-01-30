@@ -15,7 +15,7 @@ myDate.toLocaleString('default' , {
     day : '2-digit',
     year : '2-digit',
     dayPeriod : 'long',
-    timeStyle :'full' // You Cant Give Over 4 Options 
+    // timeStyle :'full' // You Cant Give Over 4 Options 
 })
 
 console.log(myDate);
