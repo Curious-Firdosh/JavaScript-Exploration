@@ -1,0 +1,68 @@
+# ========================
+# Node modules
+# ========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ========================
+# Environment variables
+# ========================
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# ========================
+# TypeScript build output
+# ========================
+dist/
+build/
+out/
+lib/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# ========================
+# JavaScript build output
+# ========================
+coverage/
+.tmp/
+.cache/
+
+# ========================
+# Logs
+# ========================
+logs/
+*.log
+
+# ========================
+# OS generated files
+# ========================
+.DS_Store
+Thumbs.db
+
+# ========================
+# Editor / IDE files
+# ========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ========================
+# Testing
+# ========================
+coverage/
+.nyc_output/
+
+# ========================
+# Optional: lock files (ONLY ignore if you know why)
+# ========================
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
